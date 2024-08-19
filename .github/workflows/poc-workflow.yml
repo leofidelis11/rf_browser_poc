@@ -4,6 +4,6 @@ on: [push]
 
 jobs:
   test:
-    rubs-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - run: echo "Validating workflow"
