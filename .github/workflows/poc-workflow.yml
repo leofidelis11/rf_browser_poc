@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.4
     permissions: write-all
     strategy:
       matrix:
@@ -14,10 +14,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Install Python 3.12.5
+      - name: Install Python 3.10
         uses: actions/setup-python@v4
         with:
-          python-version: '3.12.5'
+          python-version: '3.10'
 
       - name: Install Node.js 20.14
         uses: actions/setup-node@v3
