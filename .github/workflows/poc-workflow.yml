@@ -1,0 +1,9 @@
+name: Run RF POC
+run-name: On Push - RF POC Run
+on: [push]
+
+jobs:
+  test:
+    rubs-on: ubuntu-latest
+      steps:
+        - run: echo "Validating workflow"
