@@ -12,7 +12,7 @@ jobs:
       - name: Install Python 3.12.5
         uses: actions/setup-python@v4
         with:
-          python-vesion: '3:12.5'
+          python-version: '3:12.5'
 
       - name: Install Node.js 20.14
         uses: actions/setup-node@v3
@@ -30,3 +30,6 @@ jobs:
       - name: Run RF POC Tests
         run: |
           robot -d ./results -v HEADLESS:true -v BROWSER:chromium tests
+
+      - name: Upload Test Results
+        if: always()
