@@ -6,4 +6,27 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Validating workflow"
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install Python 3.12.5
+        uses: actions/setup-python@v4
+        with:
+          python-vesion: '3:12.5'
+
+      - name: Install Node.js 20.14
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.14'
+      
+      - name: Install Requirements
+        run: |
+          python -m pip install --upgrade pip
+          pip install -U -r requirements.txt
+          sudo npm install @playwright/test
+          sudo npx playwright install-deps
+          rfbrowser init
+
+      - name: Run RF POC Tests
+        run: |
+          robot -d ./results -v HEADLESS:true -v BROWSER:chromium tests

@@ -1,5 +1,6 @@
 *** Settings ***
-Resource  ../resources/ecommerce-poc.resource
+Resource        ../resources/ecommerce-poc.resource
+Suite Teardown  Close Browser    ALL
 
 *** Test Cases ***
 Successful login Automation Exercise Website
