@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.5 on win32)" generated="2024-08-15T16:25:45.528262" rpa="false" schemaversion="5">
+<suite id="s1" name="Ecommerce-Poc" source="c:\Users\leonardo.fidelis\Documents\rf_browser_poc\tests\ecommerce-poc.robot">
+<test id="s1-t1" name="Successful login Automation Exercise Website" line="5">
+<kw name="Open web browser" owner="ecommerce-poc">
+<kw name="New Browser" owner="Browser">
+<msg time="2024-08-15T16:25:46.826410" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\leonardo.fidelis\\Documents\\rf_browser_poc\\browser\\traces\\2f38bfb3-6928-4f14-8f8f-8b2cf8d59cc6"}</msg>
+<msg time="2024-08-15T16:25:47.120502" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\leonardo.fidelis\\Documents\\rf_browser_poc\\browser\\traces\\2f38bfb3-6928-4f14-8f8f-8b2cf8d59cc6"}</msg>
+<arg>browser=${BROWSER}</arg>
+<arg>headless=${HEADLESS}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2024-08-15T16:25:46.825408" elapsed="0.296091"/>
+</kw>
+<kw name="Uuid 4" owner="FakerLibrary">
+<msg time="2024-08-15T16:25:47.121499" level="INFO">${TRACE_NAME} = 51bd1a79-2927-4704-ab11-83f2bd50ba47</msg>
+<var>${TRACE_NAME}</var>
+<doc>Generate a random UUID4 object and cast it to another type if specified using a callable ``cast_to``.</doc>
+<status status="PASS" start="2024-08-15T16:25:47.121499" elapsed="0.000000"/>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2024-08-15T16:25:47.122495" level="INFO">${NOW} = 15-08-2024_162547</msg>
+<var>${NOW}</var>
+<arg>result_format=%d-%m-%Y_%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2024-08-15T16:25:47.121499" elapsed="0.000996"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2024-08-15T16:25:47.122495" level="INFO">&amp;{recordVideo} = { dir=C:\Users\leonardo.fidelis\Documents\rf_browser_poc/evidencies/videos/15-08-2024_162547 }</msg>
+<var>&amp;{recordVideo}</var>
+<arg>dir=${OUTPUT_DIR}/evidencies/videos/${NOW}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2024-08-15T16:25:47.122495" elapsed="0.000000"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2024-08-15T16:25:47.125080" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "recordVideo": {
+    "dir": "C:\\Users\\leonardo.fidelis\\Documents\\rf_browser_poc\\evidencies\\videos\\15-08-2024_162547",
+    "size": {
+      "width": 1200,
+      "height": 800
+    }
+  },
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "tracing": "C:\\Users\\leonardo.fidelis\\Documents\\rf_browser_poc/evidencies/traces/15-08-2024_162547/51bd1a79-2927-4704-ab11-83f2bd50ba47.zip",
+  "viewport": {
+    "width": 1200,
+    "height": 800
+  }
+}</msg>
+<msg time="2024-08-15T16:25:47.140228" level="INFO">Successfully created context and trace file will be saved to: C:\Users\leonardo.fidelis\Documents\rf_browser_poc\evidencies\traces\15-08-2024_162547\51bd1a79-2927-4704-ab11-83f2bd50ba47.zip</msg>
+<msg time="2024-08-15T16:25:47.140302" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'recordVideo': {'dir': 'C:\\Users\\leonardo.fidelis\\Documents\\rf_browser_poc\\evidencies\\videos\\15-08-2024_162547', 'size': {'width': 1200, 'height': 800}}, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'tracing': 'C:\\Users\\leonardo.fidelis\\Documents\\rf_browser_poc/evidencies/traces/15-08-2024_162547/51bd1a79-2927-4704-ab11-83f2bd50ba47.zip', 'viewport': {'width': 1200, 'height': 800}, 'trace': {'screenshots': True, 'snapshots': True}}</msg>
+<arg>viewport={'width': 1200, 'height': 800}</arg>
+<arg>tracing=${OUTPUT_DIR}/evidencies/traces/${NOW}/${TRACE_NAME}.zip</arg>
+<arg>recordVideo=${recordVideo}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2024-08-15T16:25:47.122495" elapsed="0.017807"/>
+</kw>
+<status status="PASS" start="2024-08-15T16:25:46.824411" elapsed="0.315891"/>
+</kw>
+<kw name="Go to ecommerce website" owner="ecommerce-poc">
+<kw name="New Page" owner="Browser">
+<msg time="2024-08-15T16:25:57.192453" level="INFO">Successfully initialized new page object and opened url: https://automationexercise.com/</msg>
+<msg time="2024-08-15T16:25:57.192823" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;video width="1200" height="800" controls&gt;&lt;source src="evidencies/videos/15-08-2024_162547/6b7b74b8b0d74cc0b0c41165c0cc336a.webm" type="video/webm"&gt;&lt;/video&gt;</msg>
+<arg>url=${SITE_AUTOMATION_EXERCISE}</arg>
+<arg>wait_until=load</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2024-08-15T16:25:47.142059" elapsed="10.050764"/>
+</kw>
+<kw name="Get Title" owner="Browser">
+<msg time="2024-08-15T16:25:57.200054" level="INFO">Title: 'Automation Exercise'</msg>
+<arg>==</arg>
+<arg>Automation Exercise</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2024-08-15T16:25:57.192823" elapsed="0.007231"/>
+</kw>
+<status status="PASS" start="2024-08-15T16:25:47.141576" elapsed="10.058478"/>
+</kw>
+<kw name="Perform signup" owner="ecommerce-poc">
+<kw name="Click" owner="Browser">
+<msg time="2024-08-15T16:25:57.202053" level="INFO">Clicks the element 'css=a[href="/login"]'.</msg>
+<arg>css=a[href="/login"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-08-15T16:25:57.201053" elapsed="0.871833"/>
+</kw>
+<kw name="Email" owner="FakerLibrary">
+<msg time="2024-08-15T16:25:58.073883" level="INFO">${EMAIL} = hoffmandanny@example.com</msg>
+<var>${EMAIL}</var>
+<status status="PASS" start="2024-08-15T16:25:58.072886" elapsed="0.000997"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-08-15T16:25:58.074880" level="INFO">Fills the text 'Leonardo Fidelis' in the given field.</msg>
+<arg>input[data-qa="signup-name"]</arg>
+<arg>Leonardo Fidelis</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-08-15T16:25:58.073883" elapsed="0.043404"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-08-15T16:25:58.118285" level="INFO">Fills the text 'hoffmandanny@example.com' in the given field.</msg>
+<arg>input[data-qa="signup-email"]</arg>
+<arg>${EMAIL}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-08-15T16:25:58.118285" elapsed="0.022204"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-08-15T16:25:58.141487" level="INFO">Clicks the element 'css=button[data-qa="signup-button"]'.</msg>
+<arg>css=button[data-qa="signup-button"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-08-15T16:25:58.140489" elapsed="0.326001"/>
+</kw>
+<kw name="Check Checkbox" owner="Browser">
+<arg>id=id_gender1</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Checks the checkbox or selects radio button found by ``selector``.</doc>
+<status status="PASS" start="2024-08-15T16:25:58.467481" elapsed="0.066617"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-08-15T16:25:58.535095" level="INFO">Fills the text 'P4ssw0rd' in the given field.</msg>
+<arg>id=password</arg>
+<arg>P4ssw0rd</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-08-15T16:25:58.534098" elapsed="0.025647"/>
+</kw>
+<kw name="Select Options By" owner="Browser">
+<msg time="2024-08-15T16:25:58.559745" level="INFO">Selects the option(s) 5 by attribute SelectAttribute.value from element id=days.</msg>
+<arg>id=days</arg>
+<arg>value</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="PASS" start="2024-08-15T16:25:58.559745" elapsed="0.043340"/>
+</kw>
+<kw name="Select Options By" owner="Browser">
+<msg time="2024-08-15T16:25:58.603085" level="INFO">Selects the option(s) 4 by attribute SelectAttribute.value from element id=months.</msg>
+<arg>id=months</arg>
+<arg>value</arg>
+<arg>4</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="PASS" start="2024-08-15T16:25:58.603085" elapsed="0.030165"/>
+</kw>
+<kw name="Select Options By" owner="Browser">
+<msg time="2024-08-15T16:25:58.634242" level="INFO">Selects the option(s) 2000 by attribute SelectAttribute.value from element id=years.</msg>
+<arg>id=years</arg>
+<arg>value</arg>
+<arg>2000</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="PASS" start="2024-08-15T16:25:58.634242" elapsed="0.053022"/>
+</kw>
+<kw name="Check Checkbox" owner="Browser">
+<arg>id=newsletter</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Checks the checkbox or selects radio button found by ``selector``.</doc>
+<status status="PASS" start="2024-08-15T16:25:58.687264" elapsed="0.064455"/>
+</kw>
+<kw name="Check Checkbox" owner="Browser">
+<arg>id=optin</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Checks the checkbox or selects radio button found by ``selector``.</doc>
+<status status="PASS" start="2024-08-15T16:25:58.751719" elapsed="0.066603"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-08-15T16:25:58.819323" level="INFO">Fills the text 'Leonardo' in the given field.</msg>
+<arg>id=first_name</arg>
+<arg>Leonardo</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-08-15T16:25:58.819323" elapsed="0.025958"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-08-15T16:25:58.846272" level="INFO">Fills the text 'Fidelis' in the given field.</msg>
+<arg>id=last_name</arg>
+<arg>Fidelis</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-08-15T16:25:58.845281" elapsed="0.020602"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-08-15T16:25:58.866880" level="INFO">Fills the text 'Valtech' in the given field.</msg>
+<arg>id=company</arg>
+<arg>Valtech</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-08-15T16:25:58.865883" elapsed="0.021415"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-08-15T16:25:58.888296" level="INFO">Fills the text '345, Leverage St' in the given field.</msg>
+<arg>id=address1</arg>
+<arg>345, Leverage St</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-08-15T16:25:58.888296" elapsed="0.029702"/>
+</kw>
+<kw name="Select Options By" owner="Browser">
+<msg time="2024-08-15T16:25:58.918995" level="INFO">Selects the option(s) Australia by attribute SelectAttribute.value from element id=country.</msg>
+<arg>id=country</arg>
+<arg>value</arg>
+<arg>Australia</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="PASS" start="2024-08-15T16:25:58.918995" elapsed="0.042927"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-08-15T16:25:58.962924" level="INFO">Fills the text 'Queensland' in the given field.</msg>
+<arg>id=state</arg>
+<arg>Queensland</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-08-15T16:25:58.961922" elapsed="0.020931"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-08-15T16:25:58.983848" level="INFO">Fills the text 'Brisbane' in the given field.</msg>
+<arg>id=city</arg>
+<arg>Brisbane</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-08-15T16:25:58.983848" elapsed="0.029148"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-08-15T16:25:59.013992" level="INFO">Fills the text '123458' in the given field.</msg>
+<arg>id=zipcode</arg>
+<arg>123458</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-08-15T16:25:59.012996" elapsed="0.030394"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-08-15T16:25:59.044387" level="INFO">Fills the text '12345678900' in the given field.</msg>
+<arg>id=mobile_number</arg>
+<arg>12345678900</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-08-15T16:25:59.043390" elapsed="0.040906"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-08-15T16:25:59.085726" level="INFO">Clicks the element 'css=button[data-qa="create-account"]'.</msg>
+<arg>css=button[data-qa="create-account"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-08-15T16:25:59.084539" elapsed="0.614459"/>
+</kw>
+<kw name="Get Title" owner="Browser">
+<msg time="2024-08-15T16:25:59.730234" level="INFO">Title: 'Automation Exercise - Account Created'</msg>
+<arg>==</arg>
+<arg>Automation Exercise - Account Created</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2024-08-15T16:25:59.698998" elapsed="0.031236"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-08-15T16:25:59.765266" level="INFO">Text: 'ACCOUNT CREATED!'</msg>
+<arg>css=h2[data-qa="account-created"]</arg>
+<arg>==</arg>
+<arg>ACCOUNT CREATED!</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-08-15T16:25:59.730234" elapsed="0.035032"/>
+</kw>
+<status status="PASS" start="2024-08-15T16:25:57.201053" elapsed="2.564213"/>
+</kw>
+<status status="PASS" start="2024-08-15T16:25:46.822418" elapsed="12.943845"/>
+</test>
+<status status="PASS" start="2024-08-15T16:25:45.532249" elapsed="14.997827"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Ecommerce-Poc">Ecommerce-Poc</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

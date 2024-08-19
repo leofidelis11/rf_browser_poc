@@ -1,5 +1,5 @@
 *** Settings ***
-Library    Browser    timeout=00:00:05  enable_presenter_mode=${FALSE}
+Library    Browser      enable_presenter_mode=${FALSE}  #timeout=00:00:05
 Library    FakerLibrary
 Library    DateTime
 
