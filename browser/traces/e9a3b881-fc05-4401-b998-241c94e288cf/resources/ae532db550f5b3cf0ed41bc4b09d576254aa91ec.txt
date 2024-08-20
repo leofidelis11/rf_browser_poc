@@ -1,0 +1,1 @@
+[[[{"7":[836766008364022,"ca-pub-1677597403311019",1,null,null,[1,null,[["https://automationexercise.com/payment","automationexercise.com"],[null,"en",".google.com.br"],null,[null,null,2],null,[2,2,2,0,2]],null,null,null,null,null,null,[null,14,[42,31061691,31061692,31086176,44759837,44759876,44759927,95332589,95334528,95334534,95334830,95334833]]],864]}]],[2,"m202408140101"],[]]
