@@ -1,4 +1,4 @@
-**POC: Test Automation with Robot Framework and Playwright**
+# **POC: Test Automation with Robot Framework and Playwright**
 
 This project demonstrates a proof of concept (POC) for test automation using Robot Framework and Playwright (Browser Library).
 
@@ -72,3 +72,60 @@ robot tests/
 
 For easier development, you can use **Robot Framework Language Server** in VSCode. This extension from Robocorp offers syntax highlighting, linting, code completion, debugging support etc.
 ![image](https://github.com/user-attachments/assets/63e45a76-0eef-4f15-ae24-642c1c07eb2c)
+
+<br><br>
+
+# **Test Plan**
+
+## **Objective**
+
+The objective of this test plan is to perform test automation simulating a user flow into e-commerce platform.
+
+The test plan will cover the scope:
+
+- Visit website
+- Select product
+- Add product to cart
+- Register user and perform login
+- Account creation
+- Place order
+- Process payment
+- Perform logout
+- Submit form
+
+## **Environment**
+
+Browser: Chrome v134
+
+Device: Desktop Windows 11
+
+## **Tools**
+
+- Test Automation Framework: Robot Framework v7.1
+- Programming language: Python
+- Library for Web Testing: Browser Library v19.3.0
+- Node v22.13.1
+- Npm 10.9.2
+
+## **Test Steps**
+
+1. Enter the website and scroll down about halfway down the page.
+2. Chose a product and click on “View product” under the picture of the product.
+3. In the Quantity box enter 30
+4. Click “Add to cart”
+5. Click on “Proceed to Checkout”
+6. Fill in an email address and click on “Register / Login”
+7. Enter name and email under “New User Signup” and click on “Signup” button
+8. Fill in all account information form and click on “Create Account” button
+9. Click on “Continue” under “ACCOUNT CREATED!” title
+10. Click on the Cart in the header
+11. Click on “Proceed to checkout”
+12. Add a comment and click on “Place Order”
+13. Fill in fake Credit Card information and click on “Pay and Confirm Order”
+14. Click on “Continue” button
+15. Click on “Logout” on top header
+16. On the “Login to your account” access, enter with previously created user
+17. Click on “Contact us” on the header
+18. Fill required data and Click on “Submit”
+19. Press “OK” in the pop up
+20. Click on the “Logout” button on the header.
