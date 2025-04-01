@@ -58,7 +58,16 @@ npm install @playwright/test
 ```jsx
 npx playwright install-deps
 ```
+
+**3. To run the tests:**
+
+Run the following commands to run the tests:
+
+```jsx
+robot tests/
+```
 <br><br>
+
 ***Optional Tip: VSCode Setup for Robot Framework**
 
 For easier development, you can use **Robot Framework Language Server** in VSCode. This extension from Robocorp offers syntax highlighting, linting, code completion, debugging support etc.
