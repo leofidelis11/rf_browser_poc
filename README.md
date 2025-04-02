@@ -109,8 +109,8 @@ Device: Desktop Windows 11
 
 ## **Test Steps**
 
-1. Enter the website and scroll down about halfway down the page.
-2. Chose a product and click on “View product” under the picture of the product.
+1. Enter the website and scroll down about halfway down the page
+2. Chose a product and click on “View product” under the picture of the product
 3. In the Quantity box enter 30
 4. Click “Add to cart”
 5. Click on “Proceed to Checkout”
@@ -128,4 +128,4 @@ Device: Desktop Windows 11
 17. Click on “Contact us” on the header
 18. Fill required data and Click on “Submit”
 19. Press “OK” in the pop up
-20. Click on the “Logout” button on the header.
+20. Click on the “Logout” button on the header
